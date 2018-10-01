@@ -11,6 +11,8 @@
 </template>
 
 <script>
+
+
 import LandingPage from './home.vue';
 import TrainingForm from './forms/training.vue';
     export default {

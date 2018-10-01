@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/register',[
     'uses' => 'general@register'
 ]);
+Route::get('/getList',[
+    'uses' => 'general@sendList'
+]);

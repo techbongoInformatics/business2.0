@@ -31,6 +31,7 @@ const routes = [
     routes: routes
   });
 
+  
 Vue.component('example-component', require('./components/main.vue'));
 
 const app = new Vue({
