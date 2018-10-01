@@ -6,16 +6,32 @@
  */
 
 require('./../materialize-src/js/bin/materialize');
-
+import VueRouter from 'vue-router';
+import Main from './components/main.vue'
 window.Vue = require('vue');
-
+Vue.use(VueRouter);
 /**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
+ * the vuejs router
  */
+const routes = [
+    { path: '', component: Main,
+    children:[
+      
+    //   {path:'/editItems/', component:EditTran},
+      
+    ]
+  },
+    
+    // { path: '/create-admin', component: create_user},
+   
+  ];
+  
+  const router = new VueRouter({
+    mode: 'history',
+    routes: routes
+  });
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('example-component', require('./components/main.vue'));
 
 const app = new Vue({
     el: '#app'
