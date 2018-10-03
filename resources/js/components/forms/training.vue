@@ -1,26 +1,28 @@
 <template>
 <div class="row">
-    <div class="row">
+    <div class="row ">
         
     </div>
-    <form @submit.prevent="submitForm" class="col m8">
+    <button @click.prevent="hideForm" class="back btn yellow black-text">Back</button>
+   <div class="col s12 m8 offset-m2 form-cont ">
+        <form @submit.prevent="submitForm" class="col s12">
        <div class="row">
            <div class="col s3 label-text" required>
                Your name
            </div>
            <div class="col s9">
                 <div class="row" style="margin-bottom:0px">
-            <div class="input-field col s4">
+            <div class="input-field col s12 m4">
           <input  type="text" class="validate" v-model="fname">
           <label >First Name</label>
         </div>
 
-        <div class="input-field col s4">
+        <div class="input-field col s12 m4">
           <input  type="text" class="validate" v-model="mname">
           <label >Middle Name</label>
         </div>
 
-            <div class="input-field col s4">
+            <div class="input-field col s12 m4">
           <input  type="text" class="validate" v-model="lname">
           <label >Last Name</label>
         </div>
@@ -84,11 +86,12 @@
         </div>
         <div class="row">
             <div class="center">
-                <button type="submit" class="btn green">Apply</button>
+                <button type="submit" class="btn green btn-large">Apply</button>
             </div>
         </div>
     </form>
-    {{choices}}
+   </div>
+  
 </div>
 </template>
 
@@ -145,6 +148,10 @@ export default {
                 }
             )
         },
+         hideForm(){
+        this.$emit('hide-form');
+        
+    },
         resetForm(){
             this.fname = '';
             this.mname = '';
@@ -161,12 +168,25 @@ export default {
 }
 </script>
 
-<style>
-div:hover{
-    border:1px red solid;
+<style scoped>
+div{
+    font-weight: 600;
+    color:white;
 }
+
 .label-text{
     margin-top: 1.4rem;
 }
-
+.form-cont{
+    margin-top:7vh;
+    box-shadow: 0px 0px 10px rgb(59, 59, 59);
+}
+input{
+    color: white!important;
+}
+back{
+    position:absolute;
+    top: 2px;
+    left: 2px;
+}
 </style>

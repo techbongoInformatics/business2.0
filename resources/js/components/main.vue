@@ -1,18 +1,21 @@
 <template>
-    <div class="row no-margin">
+   <div>
+        <div class="row no-margin " id="landing" style="background-image: linear-gradient(rgba(1, 3, 17, 0.97),rgba(1, 3, 17, 0.97)), url('images/bg.jpg');">
         <div v-if="flag">
-            <training-form></training-form>
+            <training-form v-on:hide-form="hideForm"></training-form>
         </div>
         <div v-else>
             <home v-on:show-form="showForm" v-on:show-pdf="showIns"></home>
         </div>
     </div>
+   
+   </div>
     
 </template>
 
 <script>
 
-
+import footer from './footer.vue';
 import LandingPage from './home.vue';
 import TrainingForm from './forms/training.vue';
     export default {
@@ -24,6 +27,7 @@ import TrainingForm from './forms/training.vue';
         components:{
             'training-form' : TrainingForm,
             'home' : LandingPage,
+            'footer' :footer,
         },
         mounted() {
 
@@ -35,6 +39,9 @@ import TrainingForm from './forms/training.vue';
             },
             showIns(){
                 window.open('http://www.google.co.in');
+            },
+            hideForm(){
+                 this.flag=false;
             }
         }
 
@@ -43,6 +50,13 @@ import TrainingForm from './forms/training.vue';
 <style>
 .no-margin{
 margin-bottom: 0px!important;
+}
+#landing{
+     background-size:contain;
+     /* background-repeat: no-repeat; */
+     /* background-position: center; */
+    height: 100vh;
+    width: 100vw;
 }
 </style>
 

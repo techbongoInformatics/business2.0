@@ -1,6 +1,6 @@
 <template>
     <div class="row outer">
-        <div id="landing" style="background-image: linear-gradient(rgba(1, 3, 17, 0.97),rgba(1, 3, 17, 0.97)), url('images/bg.jpg');">
+        <div  >
         <div class="row " style="min-height:30vh;margin-bottom:10vh;padding-top:10vh">
             <h2 class="heading white-text center">
                 Infrastructure Provisioning Training
@@ -49,13 +49,7 @@ methods:{
 </script>
 
 <style scoped>
-#landing{
-     background-size:contain;
-     /* background-repeat: no-repeat; */
-     /* background-position: center; */
-    height: 100%;
-    width: 100%;
-}
+
 .outer{
     height: 100vh;
     width: 100vw;
