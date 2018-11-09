@@ -114,7 +114,7 @@ export default {
         }
     },
     mounted(){
-        axios.get('/api/getList').then(
+        axios.get('http://www.techbongo.com/careers/api/getList').then(
             (response)=> {
                 this.choices = response.data.choices;
             }
@@ -122,7 +122,7 @@ export default {
     },
     methods:{
         submitForm(){
-            axios.post('/api/register',{
+            axios.post('http://www.techbongo.com/careers/api/register',{
                 first_name : this.fname,
             email : this.email,
             middle_name : this.mname,

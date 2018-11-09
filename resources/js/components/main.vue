@@ -38,7 +38,7 @@ import TrainingForm from './forms/training.vue';
                 this.flag=true;
             },
             showIns(){
-                window.open('http://www.google.co.in');
+                window.open('http://careers.techbongo.com/KGEC_proposal.pdf');
             },
             hideForm(){
                  this.flag=false;
@@ -52,11 +52,14 @@ import TrainingForm from './forms/training.vue';
 margin-bottom: 0px!important;
 }
 #landing{
+    
      background-size:contain;
      /* background-repeat: no-repeat; */
      /* background-position: center; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
+    
+    background-attachment:fixed;
 }
 </style>
 

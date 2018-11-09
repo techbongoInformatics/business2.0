@@ -10,14 +10,14 @@
             </h5>
         </div>
         <div class="row door ">
-            <div class="center col s4 offset-s4">
+            <div class="center col m4 s10 offset-m4 offset-s1">
                 <div class="row">
-                    <div class="col s12 m6">
+                    <div class="col s12 m6 s10" style="margin-bottom:10px;">
                         <button class="btn btn-large yellow black-text" @click.prevent="showInstructions">
                             See the instructions
                         </button>
                     </div>
-                     <div class="col s12 m6 ">
+                     <div class="col s12 m6 s10">
                          <button class="btn btn-large green black-text" @click.prevent="showForm">
                             Register
                         </button>
@@ -51,6 +51,8 @@ methods:{
 <style scoped>
 
 .outer{
+    position: fixed;
+    top: 0px;
     height: 100vh;
     width: 100vw;
     margin-bottom: 0px!important;
